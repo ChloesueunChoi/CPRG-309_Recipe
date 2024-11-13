@@ -1,19 +1,50 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
 body {
     font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100vh;     
+    background-color: #f0f0f0;
+    padding: 3rem;
 }
 
 header {
-    background-color: #4CAF50;
+    font-family: "Merriweather", serif;;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #E67E22;
     color: white;
     text-align: center;
-    padding: 1em;
+    padding: 1em 0;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.recipe-container {
+    display: flex;
+    flex-direction: column;
+    max-width: 700px;
+    width: 100%;
+    background-color: white;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    margin-top: 3rem;
+    padding-top: 1rem;
 }
 
 #recipe-list {
     padding: 1em;
     background-color: #f9f9f9;
+    border-bottom: 1px solid #ddd;
 }
 
 #recipe-list button {
@@ -21,13 +52,48 @@ header {
     margin: 0.5em 0;
     padding: 0.5em;
     font-size: 1em;
+    width: 100%;
+    text-align: left;
+    border: none;
+    background-color: #f1f1f1;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#recipe-list button:hover {
+    background-color: #EDBB99;
+}
+
+#recipe_information {
+    padding: 1rem;
 }
 
 #recipe-details {
     padding: 1em;
+    margin: 2rem;
 }
 
 #recipe-details img {
     max-width: 100%;
     height: auto;
+    margin-bottom: 1em;
+}
+
+#recipe_ingredients {
+    padding: 1rem;
+}
+
+h2 {
+    font-size: 30px;
+    font-family: "Merriweather", serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+#recipe_description {
+    font-size: 15px;
+    font-family: "Merriweather", serif;
+    font-weight: 400;
+    font-style: italic;
+    padding-bottom: 1rem;
 }

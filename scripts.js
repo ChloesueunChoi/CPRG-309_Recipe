@@ -32,25 +32,35 @@ function displayRecipeDetails(recipe) {
     const recipeDetailsSection = document.getElementById("recipe-details");
     recipeDetailsSection.innerHTML = `
         <h2>${recipe.name}</h2>
+        <br>
         <img src="${recipe.image}" alt="${recipe.name}" />
-        <p>${recipe.description}</p>
-        <p><strong>난이도:</strong> ${recipe.difficulty}</p>
-        <p><strong>준비 시간:</strong> ${recipe.prepTime}분</p>
-        <p><strong>요리 시간:</strong> ${recipe.cookTime}분</p>
-        <p><strong>서빙 인원:</strong> ${recipe.servings}명</p>
-        <h3>재료:</h3>
-        <ul>
-            ${recipe.ingredients.map(ingredient => 
-                `<li>${ingredient.amount} ${ingredient.unit} ${ingredient.item}</li>`
-            ).join('')}
-        </ul>
-        <h3>조리법:</h3>
+
+            <section id="recipe_information">
+            <p id="recipe_description">${recipe.description}</p>
+            <p id="recipe_diff"><strong>Difficulty:</strong> ${recipe.difficulty}</p>
+            <p id="prep"><strong>Prep Time:</strong> ${recipe.prepTime}min</p>
+            <p id="cook"><strong>Cook Time:</strong> ${recipe.cookTime}min</p>
+            <p id="serving"><strong>Serving:</strong> ${recipe.servings}people</p>
+            </section>
+        
+            <section id="recipe_ingredients">
+                <h3>Ingredients:</h3>
+                <ul>
+                    ${recipe.ingredients.map(ingredient => 
+                        `<li>${ingredient.amount} ${ingredient.unit} ${ingredient.item}</li>`
+                    ).join('')}
+                </ul>
+            </section>
+            
+        <h3>Instructions:</h3>
         <ol>
             ${recipe.instructions.map(step => 
                 `<li>${step.text}</li>`
             ).join('')}
         </ol>
-        <h3>영양 정보:</h3>
-        <p>칼로리: ${recipe.nutritionalInfo.calories} kcal, 단백질: ${recipe.nutritionalInfo.protein}g, 탄수화물: ${recipe.nutritionalInfo.carbohydrates}g, 지방: ${recipe.nutritionalInfo.fat}g</p>
+        <h3>Nutritional Information:</h3>
+        <p>Calories: ${recipe.nutritionalInfo.calories} kcal, Protein: ${recipe.nutritionalInfo.protein}g, Carbohydrates: ${recipe.nutritionalInfo.carbohydrates}g, Fat: ${recipe.nutritionalInfo.fat}g</p>
     `;
 }
+
+
