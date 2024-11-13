@@ -1,0 +1,33 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 1em;
+}
+
+#recipe-list {
+    padding: 1em;
+    background-color: #f9f9f9;
+}
+
+#recipe-list button {
+    display: block;
+    margin: 0.5em 0;
+    padding: 0.5em;
+    font-size: 1em;
+}
+
+#recipe-details {
+    padding: 1em;
+}
+
+#recipe-details img {
+    max-width: 100%;
+    height: auto;
+}
