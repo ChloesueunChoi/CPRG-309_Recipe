@@ -47,6 +47,23 @@ header {
     border-bottom: 1px solid #ddd;
 }
 
+.button {
+    display: block;
+    margin: 0.5em 0;
+    padding: 0.5em;
+    font-size: 1em;
+    width: fit-content;
+    text-align: left;
+    border: none;
+    background-color: #f1f1f1;
+    cursor: pointer;
+    transition: background-color 0.3s; 
+}
+
+.button:hover {
+    background-color: #EDBB99;
+}
+
 #recipe-list button {
     display: block;
     margin: 0.5em 0;
@@ -83,6 +100,14 @@ header {
     padding: 1rem;
 }
 
+#recipe_instructions {
+    padding: 1rem;
+}
+
+#nutritional_information {
+    padding: 1rem;
+}
+
 h2 {
     font-size: 30px;
     font-family: "Merriweather", serif;
@@ -96,4 +121,14 @@ h2 {
     font-weight: 400;
     font-style: italic;
     padding-bottom: 1rem;
+}
+
+#tags {
+    font-size: 15px;
+    font-family: "Merriweather", serif;
+    font-weight: 400;
+    font-style: italic;
+    text-align: right;
+    background-color: #E67E22;
+    color: white;
 }
